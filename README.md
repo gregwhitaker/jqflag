@@ -1,4 +1,5 @@
 jqflag
 ===
 
-Plans and source code for a small motorized flag.
+*A small motorized flag for when you just want to "JQ" on something*
+
