@@ -18,18 +18,27 @@
 
 Servo myservo;
 
+const int STOP = 93;
+const int CLOCKWISE = 180;
+const int COUNTER_CLOCKWISE = 0;
+
+const int CW_PIN = 7;
+const int CCW_PIN = 2;
+
 void setup() {
   myservo.attach(9);
+  pinMode(CW_PIN, INPUT_PULLUP);
+  pinMode(CCW_PIN, INPUT_PULLUP);
 }
 
 void loop() {
-  myservo.write(93);
-  delay(3000);
-  myservo.write(180);
-  delay(3000);
-  myservo.write(93);
-  delay(3000);
-  myservo.write(0);
-  delay(3500);  // The servo does not turn as fast in the clockwise direction
+  if(digitalRead(CW_PIN) == LOW) {
+    myservo.write(CLOCKWISE);
+  } else if(digitalRead(CCW_PIN) == LOW) {
+    myservo.write(COUNTER_CLOCKWISE);
+  } else {
+    myservo.write(STOP);
+  }
 }
+
 
