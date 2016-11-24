@@ -1,7 +1,7 @@
 jqflag
 ===
 
-*A small motorized flag for when you just want to "JQ" on something*
+*A small motorized flag for when you just want to @jquatier on something*
 
 ##License
 Copyright 2016 Greg Whitaker
